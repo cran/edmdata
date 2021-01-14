@@ -1,3 +1,15 @@
+# edmdata 1.1.0
+
+## Data Sets
+
+- `qmatrix_oracle_k2_j12`
+  - Oracle Q Matrices for J = 12 Items and K = 2 Traits.
+
+## Bugfixes
+
+- Fixed use of DOIs with URLs instead of `\doi{}`.
+- Fixed an issue with K = 5 attribute in `qmatrix_oracle_k5_j30`
+
 # edmdata 1.0.0
 
 ## Features
@@ -26,6 +38,8 @@
   - Taylor Manifest Anxiety Scale Item Responses
 - `items_narcissistic_personality_inventory`
   - Narcissistic Personality Inventory Item Responses
+- `items_spm_ls`
+  - Last Series of the Standard Progressive Matrices (SPM-LS) Item Responses
 - `qmatrix_oracle_k3_j20`
   - Oracle Q Matrices for J = 20 Items and K = 3 Traits.
 - `qmatrix_oracle_k4_j20`
