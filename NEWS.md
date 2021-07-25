@@ -1,3 +1,32 @@
+# edmdata 1.2.0
+
+## Data Sets
+
+- `items_probability_part_one`
+  - Elementary Probability Theory Assessment Item Responses based on data
+    from the `pks` package.
+- `qmatrix_probability_part_one` 
+  - Elementary Probability Theory Assessment Expert-Derived Q Matrix based
+    off of the mapping given in the `pks` package data example.
+- Oracle Strategy Sets for use in multiple-strategies simulation studies.
+  - `strategy_oracle_k3_j20_s2`: 20 items, 3 traits, and 2 strategies.
+  - `strategy_oracle_k3_j30_s2`: 30 items, 3 traits, and 2 strategies.
+  - `strategy_oracle_k3_j40_s2`: 40 items, 3 traits, and 2 strategies.
+  - `strategy_oracle_k3_j50_s2`: 50 items, 3 traits, and 2 strategies.
+  - `strategy_oracle_k4_j20_s2`: 20 items, 4 traits, and 2 strategies.
+  - `strategy_oracle_k4_j30_s2`: 30 items, 4 traits, and 2 strategies.
+  - `strategy_oracle_k4_j40_s2`: 40 items, 4 traits, and 2 strategies.
+  - `strategy_oracle_k4_j50_s2`: 50 items, 4 traits, and 2 strategies.
+
+## Bugfixes
+
+- Fixed `ecpe` paper references.
+
+## Deployment 
+
+- Added a custom user dictionary containing author names to prevent the 
+  R CMD check error of 'Possibly misspelled words in DESCRIPTION'. 
+
 # edmdata 1.1.0
 
 ## Data Sets
