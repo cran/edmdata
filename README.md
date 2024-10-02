@@ -12,90 +12,37 @@ status](https://github.com/tmsalab/edmdata/workflows/R-CMD-check/badge.svg)](htt
 status](https://www.r-pkg.org/badges/version/edmdata)](https://CRAN.R-project.org/package=edmdata)
 <!-- badges: end -->
 
-The goal of `edmdata` is to provide a set of an example assessment data
-sets for psychometric modeling.
+The goal of `edmdata` R data package is to provide a set of assessment
+data sets for psychometric modeling.
 
 ## Installation
 
-You can install `edmdata` from github with:
+The `edmdata` package is available on both
+[CRAN](https://CRAN.R-project.org/package=edmdata) and
+[GitHub](https://github.com/tmsalab/edmdata). The CRAN version is
+considered stable while the GitHub version is in a state of development
+and may break.
+
+You can install the stable version of the `edmdata` package with:
 
 ``` r
-# install.packages("devtools")
-devtools::install_github("tmsalab/edmdata")
+install.packages("edmdata")
 ```
 
-## Data Sets Included
+For the development version, you can install the `edmdata` package from
+GitHub with:
 
--   Examination for the Certificate of Proficiency in English (ECPE)
-    (Templin & Bradshaw, 2014; Templin & Hoffman, 2013).
-    -   `items_ecpe`: N = 2922 subject responses to J = 28 items.
-    -   `qmatrix_ecpe`: J = 28 items and K = 3 traits.
-    -   **TMSA Papers:** Culpepper & Chen (2019)
--   Fraction Addition and Subtraction (C. Tatsuoka, 2002; K. K.
-    Tatsuoka, 1984).
-    -   `items_fractions`: N = 536 subject responses to J = 20 items.
-    -   `qmatrix_fractions`: J = 536 items and K = 20 traits.
-    -   **TMSA Papers:** Yinghan Chen et al. (2021), Yinyin Chen et
-        al. (2020), Culpepper (2019b), Culpepper & Chen (2019), Yinghan
-        Chen et al. (2018)
--   Elementary Probability Theory (Heller & Wickelmaier, 2013).
-    -   `items_probability_part_one`: N = 504 subject responses to J =
-        12 items.
-    -   `qmatrix_probability_part_one`: J = 12 items and K = 4 traits.
-    -   **TMSA Papers:** Yinghan Chen et al. (2021)
--   Revised PSVT:R (Culpepper & Balamuta, 2017; Yoon, 2011).
-    -   `items_revised_psvtr`: N = 516 subject responses to J = 30
-        items.
-    -   **TMSA Papers:** Culpepper & Balamuta (2017), Culpepper (2015)
--   Subset of Early Childhood Longitudinal Study, Kindergarten Class of
-    1998-1999’s Approaches to Learning (NCES, 2010).
-    -   `items_ordered_eclsk_atl`: N = 13354 subject responses to J = 12
-        items.
-    -   **TMSA Papers:** Culpepper (2019a)
--   Last Series of the Standard Progressive Matrices (SPM-LS)
-    (Myszkowski & Storme, 2018; Raven, 1941; Robitzsch, 2020).
-    -   `items_spm_ls`: N = 499 subject responses to J = 12 items.
--   Experimental Matrix Reasoning Test (OpenPsychometrics, 2012a).
-    -   `items_matrix_reasoning`: N = 400 subject responses to J = 25
-        items.
-    -   **TMSA Papers:** Yinyin Chen et al. (2020)
--   Taylor Manifest Anxiety Scale (OpenPsychometrics, 2012b;
-    Taylor, 1953).
-    -   `items_taylor_manifest_anxiety_scale`: N = 4468 subject
-        responses to J = 50 items.
--   Narcissistic Personality Inventory (OpenPsychometrics, 2013; Raskin
-    & Terry, 1988).
-    -   `items_narcissistic_personality_inventory`: N = 11243 subject
-        responses to J = 40 items.
--   Pre-generated identified Q matrices.
-    -   `qmatrix_oracle_k2_j12`: 12 items and 2 traits.
-    -   `qmatrix_oracle_k3_j20`: 20 items and 3 traits.
-    -   `qmatrix_oracle_k4_j20`: 20 items and 4 traits.
-    -   `qmatrix_oracle_k5_j30`: 30 items and 5 traits.
--   Pre-generated strategy sets.
-    -   `strategy_oracle_k3_j20_s2`: 20 items, 3 traits, and 2
-        strategies.
-    -   `strategy_oracle_k3_j30_s2`: 30 items, 3 traits, and 2
-        strategies.
-    -   `strategy_oracle_k3_j40_s2`: 40 items, 3 traits, and 2
-        strategies.
-    -   `strategy_oracle_k3_j50_s2`: 50 items, 3 traits, and 2
-        strategies.
-    -   `strategy_oracle_k4_j20_s2`: 20 items, 4 traits, and 2
-        strategies.
-    -   `strategy_oracle_k4_j30_s2`: 30 items, 4 traits, and 2
-        strategies.
-    -   `strategy_oracle_k4_j40_s2`: 40 items, 4 traits, and 2
-        strategies.
-    -   `strategy_oracle_k4_j50_s2`: 50 items, 4 traits, and 2
-        strategies.
+``` r
+# install.packages("remotes")
+remotes::install_github("tmsalab/edmdata")
+```
 
 ## Using data in the package
 
 There are two ways to access the data contained within this package.
 
 The first is to load the package itself and type the name of a data set.
-This approach takes advantage of *R*’s lazy loading mechansim, which
+This approach takes advantage of *R*’s lazy loading mechanism, which
 avoids loading the data until it is used in *R* session. For details on
 how lazy loading works, please see [Section 1.17: Lazy
 Loading](https://cran.r-project.org/doc/manuals/r-release/R-ints.html#Lazy-loading)
@@ -129,6 +76,85 @@ head(items_revised_psvtr)
 ?items_revised_psvtr
 ```
 
+## Data Sets Included
+
+- Examination for the Certificate of Proficiency in English (ECPE)
+  (Templin & Bradshaw, 2014; Templin & Hoffman, 2013).
+  - `items_ecpe`: N = 2922 subject responses to J = 28 items.
+  - `qmatrix_ecpe`: J = 28 items and K = 3 traits.
+  - **TMSA Papers:** Culpepper & Chen (2019)
+- Fraction Addition and Subtraction (C. Tatsuoka, 2002; K. K. Tatsuoka,
+  1984).
+  - `items_fractions`: N = 536 subject responses to J = 20 items.
+  - `qmatrix_fractions`: J = 536 items and K = 20 traits.
+  - **TMSA Papers:** Yinghan Chen et al. (2021), Yinyin Chen et al.
+    (2020), Culpepper (2019b), Culpepper & Chen (2019), Yinghan Chen et
+    al. (2018)
+- Elementary Probability Theory (Heller & Wickelmaier, 2013).
+  - `items_probability_part_one_full`: N = 504 subject responses to J =
+    12 items.
+  - `items_probability_part_one_reduced`: N = 431 subject responses to J
+    = 12 items.
+  - `qmatrix_probability_part_one`: J = 12 items and K = 4 traits.
+  - **TMSA Papers:** Yinghan Chen et al. (2021)
+- Revised PSVT:R (Culpepper & Balamuta, 2017; Yoon, 2011).
+  - `items_revised_psvtr`: N = 516 subject responses to J = 30 items.
+  - **TMSA Papers:** Culpepper & Balamuta (2017), Culpepper (2015)
+- Subset of Early Childhood Longitudinal Study, Kindergarten Class of
+  1998-1999’s Approaches to Learning (NCES, 2010).
+  - `items_ordered_eclsk_atl`: N = 13354 subject responses to J = 12
+    items.
+  - **TMSA Papers:** Culpepper (2019a)
+- Trends in International Mathematics and Science Study 2015 (TIMSS)
+  Grade 8 Student Background Survey Item Responses (Mullis et al.,
+  2016).
+  - `items_ordered_timss15_background`: N = 9672 subject responses to J
+    = 16 items.
+- Calculus-based probability and statistics course homework problems
+  Jimenez et al. (2023)
+  - `items_ordered_pswc_hw`: N = 288 subject responses to J = 29 items.
+- Programme for International Student Assessment (PISA) 2012 U.S.
+  Student Questionnaire Problem-Solving Vignettes (Culpepper & Balamuta,
+  2021).
+  - `items_ordered_pisa12_us_vignette`: N = 3075 subject responses to J
+    = 12 items.
+- Programme for International Student Assessment (PISA) 2012 U.S. Math
+  Assessment.
+  - `items_pisa12_us_math`: N = 4978 subject responses to J = 76 items.
+- Last Series of the Standard Progressive Matrices (SPM-LS) (Myszkowski
+  & Storme, 2018; Raven, 1941; Robitzsch, 2020).
+  - `items_spm_ls`: N = 499 subject responses to J = 12 items.
+- Human Connectome Project’s Penn Progressive Matrices Fluid
+  Intelligence Assessment
+  - `items_hcp_penn_matrix`: N = 1201 subject responses to J = 24 items.
+  - `items_hcp_penn_matrix_missing`: N = 1201 subject responses with
+    missing data indicators to J = 24 items.
+- Experimental Matrix Reasoning Test (OpenPsychometrics, 2012a).
+  - `items_matrix_reasoning`: N = 400 subject responses to J = 25 items.
+  - **TMSA Papers:** Yinyin Chen et al. (2020)
+- Taylor Manifest Anxiety Scale (OpenPsychometrics, 2012b; Taylor,
+  1953).
+  - `items_taylor_manifest_anxiety_scale`: N = 4468 subject responses to
+    J = 50 items.
+- Narcissistic Personality Inventory (OpenPsychometrics, 2013; Raskin &
+  Terry, 1988).
+  - `items_narcissistic_personality_inventory`: N = 11243 subject
+    responses to J = 40 items.
+- Pre-generated identified Q matrices.
+  - `qmatrix_oracle_k2_j12`: 12 items and 2 traits.
+  - `qmatrix_oracle_k3_j20`: 20 items and 3 traits.
+  - `qmatrix_oracle_k4_j20`: 20 items and 4 traits.
+  - `qmatrix_oracle_k5_j30`: 30 items and 5 traits.
+- Pre-generated strategy sets.
+  - `strategy_oracle_k3_j20_s2`: 20 items, 3 traits, and 2 strategies.
+  - `strategy_oracle_k3_j30_s2`: 30 items, 3 traits, and 2 strategies.
+  - `strategy_oracle_k3_j40_s2`: 40 items, 3 traits, and 2 strategies.
+  - `strategy_oracle_k3_j50_s2`: 50 items, 3 traits, and 2 strategies.
+  - `strategy_oracle_k4_j20_s2`: 20 items, 4 traits, and 2 strategies.
+  - `strategy_oracle_k4_j30_s2`: 30 items, 4 traits, and 2 strategies.
+  - `strategy_oracle_k4_j40_s2`: 40 items, 4 traits, and 2 strategies.
+  - `strategy_oracle_k4_j50_s2`: 50 items, 4 traits, and 2 strategies.
+
 ## Build Scripts
 
 Want to see how each data set was imported? Check out the
@@ -155,7 +181,8 @@ MIT
 
 ## References
 
-<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="refs" class="references csl-bib-body hanging-indent"
+entry-spacing="0">
 
 <div id="ref-Chen:2018:EDINA" class="csl-entry">
 
@@ -182,6 +209,15 @@ the number of attributes for the exploratory DINA model.
 
 </div>
 
+<div id="ref-Culpepper:2014:SequentialIRT" class="csl-entry">
+
+Culpepper, S. A. (2014). If at first you don’t succeed, try, try again:
+Applications of sequential IRT models to cognitive assessments. *Applied
+Psychological Measurement*, *38*(8), 632–644.
+<https://doi.org/10.1177/0146621614536464>
+
+</div>
+
 <div id="ref-Culpepper:2015:BayesianDINA" class="csl-entry">
 
 Culpepper, S. A. (2015). Bayesian estimation of the DINA model with
@@ -201,9 +237,9 @@ responses with binary attributes: Identifiability and estimation.
 
 <div id="ref-Culpepper:2019:EGDM" class="csl-entry">
 
-Culpepper, S. A. (2019b). Estimating the cognitive diagnosis *Q* matrix
-with expert knowledge: Application to the fraction-subtraction dataset.
-*Psychometrika*, *84*(2), 333–357.
+Culpepper, S. A. (2019b). Estimating the cognitive diagnosis $`Q`$
+matrix with expert knowledge: Application to the fraction-subtraction
+dataset. *Psychometrika*, *84*(2), 333–357.
 <https://doi.org/10.1007/s11336-018-9643-8>
 
 </div>
@@ -214,6 +250,15 @@ Culpepper, S. A., & Balamuta, J. J. (2017). <span class="nocase">A
 Hierarchical Model for Accuracy and Choice on Standardized Tests</span>.
 *Psychometrika*, *82*(3), 820–845.
 <https://doi.org/10.1007/s11336-015-9484-7>
+
+</div>
+
+<div id="ref-Culpepper:2021:OHOEGDM" class="csl-entry">
+
+Culpepper, S. A., & Balamuta, J. J. (2021). Inferring latent structure
+in polytomous data with a higher-order diagnostic model. *Multivariate
+Behavioral Research*, 1–19.
+<https://doi.org/10.1080/00273171.2021.1985949>
 
 </div>
 
@@ -230,7 +275,26 @@ Educational and Behavioral Statistics*, *44*(1), 3–24.
 
 Heller, J., & Wickelmaier, F. (2013). Minimum discrepancy estimation in
 probabilistic knowledge structures. *Electronic Notes in Discrete
-Mathematics*, *42*, 49–56.
+Mathematics*, *42*, 49–56. <https://doi.org/10.1016/j.endm.2013.05.145>
+
+</div>
+
+<div id="ref-Jimenez:2023:OPGEDM" class="csl-entry">
+
+Jimenez, A., Balamuta, J. J., & Culpepper, S. A. (2023). A sequential
+exploratory diagnostic model using a pólya-gamma data augmentation
+strategy. *British Journal of Mathematical and Statistical Psychology*,
+*76*(3), 513–538. <https://doi.org/10.1111/bmsp.12307>
+
+</div>
+
+<div id="ref-TIMSS:2015:Background" class="csl-entry">
+
+Mullis, I. V. S., Martin, M. O., Goh, S., & Cotter, K. (Eds. ). (2016).
+*TIMSS 2015 encyclopedia: Education policy and curriculum in mathematics
+and science*. Retrieved from Boston College, TIMSS & PIRLS International
+Study Center website:
+http://timssandpirls.bc.edu/timss2015/encyclopedia/.
 
 </div>
 
